@@ -9,7 +9,7 @@ function addemp(name,salary,department){
         name:name.trim(),
         salary:salary,
         department:department.trim(),
-        result:esalary>=salary? "goodsalary":"badsalary"
+        result:salary>=esalary? "goodsalary":"badsalary"
     };
     ename.push(emp);
 }
@@ -52,7 +52,7 @@ const showemp=()=>{
         Name :${name.toUpperCase()}<br>
         Salery:${salary}<br>
         Department:${department}<br>
-        Result<span class="${result=="good salery"?"goodsalery ":"badsalary"}">${result}</span><br>`;
+        Result<span class="${result==="good salery"?"goodsalery ":"badsalary"}">${result}</span><br>`;
     }
     let salary=ename.map(s=>s.salary);
     let tsalery =salary.reduce((sum,m)=>sum+m,0);
@@ -88,3 +88,4 @@ function ajaxx(){
     })
     },10000)
 }
+
